@@ -26,8 +26,32 @@ Please refer https://nbviewer.jupyter.org/github/anilbhatt1/EPAI_1_Phase1/blob/m
   - How AND evaluates a condition
   - Using 'in' to evaluate conditions
 
-# Assignment
+## Assignment
 
 - Assignment is as below.
 
 ![Assignment](https://github.com/anilbhatt1/EPAI/blob/master/Session-4/Assignment.jpg)
+
+
+## Assignment Solution
+
+- Following functions were written to enable the Qualean Class.
+
+- **init**
+  - This function accepts the user input which must be one among [-1, 0, 1].
+  - This input is passed to **transform** function which will return a value that will be stored in self.q.
+  - If user input is not the desired one, an exception is raised.
+- **transform**
+  - Used in tandom with **init** function.
+  - Accepts user input from init function, generates a random value between -1 and 1.
+  - Multiplies this random value with user input, rounds it to 10 decimal places and returns back value to init.
+  - This value is stored as self.q in init.
+- **str**
+  - Overridden innate str function to return user input value *Qualean Number :{int(self.user_input)}* eg: Qualean Number :1
+  - Prior to customization, str was returning memory location of object
+  - Gets invoked when print() or str() is called. 
+- **repr**
+  - Overridden innate repr function to return user input value.
+  - Initially it was displaying the location of the object.
+  - Gets invoked when we try to display variable name eg: x
+- **add**
